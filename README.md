@@ -1,1 +1,6 @@
-# sai-spring-boot-psql-maven-demo
+# Spring Boot JPA PostgreSQL example with Maven
+
+## Run Spring Boot application
+```
+mvn spring-boot:run
+```
