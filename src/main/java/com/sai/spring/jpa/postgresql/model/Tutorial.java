@@ -15,6 +15,9 @@ public class Tutorial {
 
 	@Column(name = "description")
 	private String description;
+	
+	@Column(name = "official_refrence_links")
+	private String officalRefLinks;
 
 	@Column(name = "published")
 	private boolean published;
@@ -23,10 +26,11 @@ public class Tutorial {
 
 	}
 
-	public Tutorial(String title, String description, boolean published) {
+	public Tutorial(String title, String description,String officalRefLinks, boolean published) {
 		this.title = title;
 		this.description = description;
 		this.published = published;
+		this.officalRefLinks = officalRefLinks;
 	}
 
 	public long getId() {
@@ -48,6 +52,16 @@ public class Tutorial {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	
+
+	public String getOfficalRefLinks() {
+		return officalRefLinks;
+	}
+
+	public void setOfficalRefLinks(String officalRefLinks) {
+		this.officalRefLinks = officalRefLinks;
+	}
 
 	public boolean isPublished() {
 		return published;
@@ -59,7 +73,7 @@ public class Tutorial {
 
 	@Override
 	public String toString() {
-		return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+		return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description +",officalRefLinks="+officalRefLinks+", published=" + published + "]";
 	}
 
 }
